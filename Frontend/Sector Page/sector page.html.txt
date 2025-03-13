@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+       .grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 2px;
+        }
+        .square {
+            width: 6px;
+            height: 6px;
+            background-color: black;
+            cursor: pointer;
+        }
+        .options {
+            display: none;
+            background-color: white;
+            border: 1px solid black;
+            position: absolute;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .options p {
+            margin: 0;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .options p:hover {
+            background-color: #ddd;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+      .collapse navbar-collapse{
+         align-items: center;
+      }
+        .navbar {
+            background-color: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+          .navbar-brand {
+            display: flex;
+            align-items: center;
+          }
+        .navbar-brand img {
+            height: 40px;
+        }
+       .navbar-brand span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .nav-link {
+            color: black;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: #007bff;
+        }
+        .btn-signup {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-weight: bold;
+            margin-right: 60px;
+        }
+        .header-section {
+            background-color: #eef4fc;
+            padding: 40px 20px;
+        }
+        .search-box {
+            max-width: 300px;
+        }
+        .card {
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .icon {
+            font-size: 40px;
+        }
+        .company-badge {
+            display: inline-block;
+            background-color: #b2f5ea;
+            color: #02735e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+           .breadcrumb {
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+        .breadcrumb span {
+            color: gray;
+        }
+      
+        .sector-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .left-section {
+            max-width: 50%;
+        }
+        .right-section {
+            max-width: 30%;
+        }
+        .search-box {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+      .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+     .text-muted{
+        font-weight: bold; 
+            }
+        .icon {
+            font-size: 30px;
+        }
+        .company-badge {
+            display: inline-block;
+            background-color: #b2f5ea;
+            color: #02735e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+      .btn-primary {
+    width: 90px;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto; /* Centers the button */
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="dp.jpg" alt="BLUESTOCK">
+                <span>BLUESTOCK</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">IPO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brokers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Live News <span class="badge bg-primary">NEW</span></a></li>
+                </ul>
+                <div>
+                    <a href="#" class="text-dark me-3">Sign In</a>
+                    <a href="#" class="btn btn-signup">Sign Up Now</a>
+                </div>
+              <div class="grid">
+        <div class="square" onclick="showOptions(event)"></div>
+        <div class="square" onclick="showOptions(event)"></div>
+        <div class="square" onclick="showOptions(event)"></div>
+        <div class="square" onclick="showOptions(event)"></div>
+        <div class="square" onclick="showOptions(event)"></div>
+        <div class="square" onclick="showOptions(event)"></div>
+    </div>
+    <div class="options" id="options">
+        <p onclick="alert('Option 1')">Option 1</p>
+        <p onclick="alert('Option 2')">Option 2</p>
+        <p onclick="alert('Option 3')">Option 3</p>
+    </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-3">
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> <span> > Sector</span>
+        </nav>
+        
+        <div class="sector-container mt-2">
+            <div class="left-section">
+                <h1 class="fw-bold">Sector</h1>
+                <p class="text-muted">Go to your favourite sector and analyse it in detail.</p>
+            </div>
+            <div class="right-section">
+                <label for="sector-search" class="form-label">Search for a sector</label>
+                <input type="text" id="sector-search" class="search-box" placeholder="Type here...">
+            </div>
+        </div>
+    </div>
+
+ 
+    
+    <div class="container py-5">
+    <div class="row" id="sector-list">
+        <!-- Sector cards will be inserted here by JavaScript -->
+    </div>
+</div>
+
+<script>
+    const sectors = [
+        { name: "Abrasives", description: "The one that scraps away all inconsistencies.", companies: 3, micro: 1, small: 2, mid: 0, large: 0, icon: "🛠️" },
+        { name: "Adevetising & Media", description: "The one that creates and distributes media content.", companies: 10, micro: 8, small: 2, mid: 0, large: 0, icon: "📰" },
+        { name: "Agriculture", description: "The one that gives us vegetables and fruits to eat.", companies: 41, micro: 36, small: 4, mid: 1, large: 0, icon: "🌱" },
+        { name: "Air conditioners", description: "The one that's keep it cool with noise.", companies: 5, micro: 1, small: 1, mid: 2, large: 0, icon: "❄️" },
+        { name: "Airlines", description: "The one that takes us around the world in the shortest time.", companies: 6, micro:2, small: 3, mid: 0, large: 1, icon: "✈️" },
+        { name: "Aluminium & Aluminium products", description: "The one that can wrap up almost everything.", companies: 18, micro: 14, small: 3, mid: 1, large: 0, icon: "🏭" },
+        { name: "Amusement Parks/Recreation/club", description: "The one that's all about the fun stuff and food.", companies: 4, micro: 1, small: 2, mid: 1, large: 0, icon: "🎡" },
+        { name: "Aquaculture", description: "The one that takes care of aquatic animals.", companies: 8, micro: 7, small: 1, mid: 0, large: 0, icon: "🐟" },
+        { name: "Auto Ancillary ", description: "The one that provides parts to keep our vehicles running.", companies: 95, micro: 42, small: 27, mid: 21, large: 5, icon: "🔧" },
+        { name: "Automobile Two & Three Wheelers", description: "The one that suits couples and smaller groups.", companies: 7, micro: 1, small: 2, mid: 0, large: 4, icon: "🛵" },
+        { name: "Automobiles - Dealers & Distributors", description: "The one that makes cars and buses available to public.", companies: 4, micro: 2, small: 2, mid: 0, large: 0, icon: "🚗🤝" },
+        { name: "Automobiles - Passesnger Cars", description: "The one that lets families travel together comfortably.", companies: 4, micro: 1, small: 1, mid: 0, large: 2, icon: "🚙" }
+    ];
+
+    function displaySectors() {
+        const sectorList = document.getElementById("sector-list");
+        sectorList.innerHTML = "";
+        sectors.forEach(sector => {
+            const card = `
+    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card shadow-sm p-3 text-center" style="background: linear-gradient(to bottom, #aecbfa, white);">
+                            <div class="icon-container">
+                                <div class="icon">${sector.icon}</div>
+                            </div>
+                            <h2 class="h5 mt-3">${sector.name}</h2>
+                            <p class="text-muted small">${sector.description}</p>
+                            <div class="company-badge">${sector.companies} Listed Companies</div>
+                            <div class="d-flex justify-content-center gap-3 text-muted small mt-2">
+                                <span>Micro: ${sector.micro}</span>
+                                <span>Small: ${sector.small}</span>
+                                <span>Mid: ${sector.mid}</span>
+                                <span>Large: ${sector.large}</span>
+                            </div>
+                            <button class="btn btn-primary mt-3">Details</button>
+                        </div>
+                    </div>`;
+            sectorList.innerHTML += card;
+        });
+    }
+    document.addEventListener("DOMContentLoaded", displaySectors);
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="YOUR_POPPER_INTEGRITY_HASH" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="YOUR_BOOTSTRAP_INTEGRITY_HASH" crossorigin="anonymous"></script>
+   
+   <script>
+   function showOptions(event) {
+            const options = document.getElementById('options');
+            options.style.display = 'block';
+            options.style.left = event.pageX + 'px';
+            options.style.top = event.pageY + 'px';
+        }
+        function show(event) {
+            const productsDropdown = document.getElementById('productsDropdown');
+        
+        }
+
+        // Hide options menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const options = document.getElementById('options');
+            if (!event.target.classList.contains('square')) {
+                options.style.display = 'none';
+            }
+        });
+      
+  </script>
+</body>
+</html>
