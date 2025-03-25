@@ -1,0 +1,189 @@
+.navbar-brand img{
+    width: 220px;
+    height: auto;
+}
+.container{
+    justify-content: space-between;
+}
+
+.center-box{
+    display: flex;
+    background-color: lightgray;
+    width: 100vw;
+    height: 40vh;
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.part1{
+    padding: 6vh;
+    width: 60vw;
+    background-color: lightgray;
+}
+.part1 h1{
+    color: black;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+.part1 p{
+    color: black;
+    font-weight: 500;
+    font-size: large;
+}
+.part2{
+    margin: auto;
+    background-color: rgb(73, 73, 226);
+    width: 150px;
+    height: 150px;
+}
+.heading {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 10px;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+
+}
+.categ{
+    /* display: flex; */
+    height:fit-content;
+    margin-top: 5vh;
+    background-color: lightgray;
+    width: 15vw;
+    padding: 1vw;
+    border-radius: 10%;
+}
+
+.categ li{
+    list-style: none;
+    padding-bottom: 2vh;
+    text-align: start;
+    margin-left: -2rem;
+}
+
+.categ li p{
+    display: inline;
+    margin-left: 2vw;
+    text-align: right;
+}
+
+.sto_temp{
+    margin-left: 10vw;
+    margin-bottom: 20px;
+    display: flex;
+    width: 60vw;
+    height: 10vh;
+    background-color: lightgray;
+    justify-content: space-between;
+}
+
+.sto_temp .title_img .logo{
+    display: flex;
+    width: 10%;
+    border-radius: 10%;
+}
+.sto_temp .title_img .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: auto;
+    /* width: 70%; */
+}
+/* -------------------- */
+.descpar{
+    display: flex;
+}
+.fund-card {
+    /* flex: 0 0 100%; */
+    /* width: fit-content; */
+    /* margin-left: 10vw; */
+    /* width: auto; */
+    background: lightgray;
+    margin-bottom: 4vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-bottom: 10px;
+}
+
+.logo{
+    margin-right: 4vw;
+}
+.logo img {
+    width: 80px;
+    border-radius: 10%;
+}
+
+.fund-info{
+    /* margin-left: 4vw; */
+    margin-right: 4vw;
+}
+.fund-info h2 {
+    text-align: start;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+}
+
+.fund-info p {
+    text-align: start;
+    font-size: 14px;
+    color: #060303;
+    margin: 5px 0 0;
+    width: 100%;
+}
+
+.cagr p {
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+}
+
+hr {
+    border: 0.5px solid #ddd;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.detail h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.detail p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+/* .bold {
+    display: flex;
+    font-weight: bolder;
+    width: fit-content  ;
+}
+.non-bold{
+    display: flex;
+} */
